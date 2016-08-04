@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="523.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zad4_1.FXMLDocumentController">
+   <children>
+      <MenuBar layoutX="20.0" layoutY="2.0" maxHeight="30.0" minHeight="26.0" prefHeight="26.0" prefWidth="587.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#nowy" text="Nowy" />
+                  <MenuItem mnemonicParsing="false" onAction="#otworz" text="Otwórz" />
+                  <MenuItem mnemonicParsing="false" onAction="#zapisz" text="Zapisz" />
+                  <MenuItem mnemonicParsing="false" onAction="#zapiszJako" text="Zapisz jako..." />
+                  <MenuItem fx:id="zamknij" mnemonicParsing="false" onAction="#zamknij" text="Zamknij" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" onAction="#zmienKodowanie" text="Kodowanie">
+               <items>
+                  <RadioMenuItem fx:id="utf" mnemonicParsing="false" selected="true" text="UTF-8">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="groupMenu" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="iso" mnemonicParsing="false" text="ISO-8859-2" toggleGroup="$groupMenu" />
+                  <RadioMenuItem fx:id="widnows" mnemonicParsing="false" text="windows-1250" toggleGroup="$groupMenu" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#info" text="Info">
+              <items>
+                <MenuItem mnemonicParsing="false" text="o programie" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="mainText" layoutY="26.0" prefHeight="499.0" prefWidth="587.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+   </children>
+</AnchorPane>
